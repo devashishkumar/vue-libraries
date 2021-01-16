@@ -18,6 +18,11 @@ import GoogleMaps from "@/components/GoogleMaps.vue"; // @ is an alias to /src
   components: {
     GoogleMaps,
   },
+  methods: {
+    clickMarkerMethod: function(data: any) {
+      console.log('clicked row is ',data);
+    }
+  },
   data() {
     return {
       latLong: {

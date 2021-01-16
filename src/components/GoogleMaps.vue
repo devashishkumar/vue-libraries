@@ -75,8 +75,7 @@ declare const google: any;
       marker.setValues({ id: i, type: currentType });
 			((marker, l) => {
 				google.maps.event.addListener(marker, 'click', () => {
-          // window.console.log(l, this.markers[l], '119');
-          this.markerClickEvent.emit({rowClicked: l});
+          this.$emit('markerClicked', {rowClicked: l});
 				});
 			})(marker, i);
 			this.customMarkers.push(marker);
