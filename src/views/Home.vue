@@ -12,7 +12,7 @@
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
 import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
-import GoogleMaps from "@/components/GoogleMaps.vue"; // @ is an alias to /src
+import GoogleMaps from "@/components/google-maps.vue"; // @ is an alias to /src
 
 @Options({
   components: {
