@@ -1,0 +1,36 @@
+add index.js file in src add add required components
+
+import Vue from 'vue';
+import GoogleMaps from "@/components/google-maps.vue";
+const Components = {
+    GoogleMaps,
+};
+Object.keys(Components).forEach(name => {
+    Vue.component(name, Components[name]);
+});
+export default Components
+
+
+add package name and files in package json file like this:
+
+"name": "google-maps-vue",
+"files": [
+  "dist/*",
+  "src/*",
+  "public/*",
+  "*.json",
+  "*.js",
+  "plugins/*"
+]
+add dist path in package json
+"main": "./dist/google-maps.js",
+
+add build command in package json file
+
+"build-bundle": "vue-cli-service build --target lib --name google-maps ./src/components/index.js"
+
+add command to publish
+
+npm publish --access public
+
+http://parseobjects.com/publish-vue-js-components-npm/

@@ -16,13 +16,22 @@ declare const google: any;
   },
   props: {
     markers: [],
-    latLong: {}
+    latLong: {},
+    apiKey: ''
   },
   created() {
+    const googleMapScript = document.createElement("SCRIPT");
+    googleMapScript.setAttribute(
+      "src",
+      `https://maps.googleapis.com/maps/api/js?key=${this.apiKey}&**callback=initMap`
+    );
+    googleMapScript.setAttribute("defer", "");
+    googleMapScript.setAttribute("async", "");
+    document.head.appendChild(googleMapScript);
     this.divId = this.generateDynamicString(8);
     setTimeout(() => {
       this.loadMap();
-    }, 0);
+    }, 2000);
   },
   methods: {
     loadMap() {
