@@ -1,8 +1,8 @@
 {
   "name": "google-maps-vue-library",
-  "version": "1.3.0",
+  "version": "1.6.0",
   "private": false,
-  "main": "./dist/google-maps-vue-library.js",
+  "main": "./src/components/index.js",
   "files": [
     "dist/*",
     "src/*",

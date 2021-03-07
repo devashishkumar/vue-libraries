@@ -26,7 +26,7 @@ import GoogleMaps from "@/components/google-maps.vue"; // @ is an alias to /src
   },
   data() {
     return {
-      apiKey: "AIzaSyBM-Pje26mgUYOfDwfVEAUCZNp-3W8GjwA",
+      apiKey: "your google maps key",
       latLong: {
         lat: 28.5636,
         long: 77.3726,
